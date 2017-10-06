@@ -51,6 +51,7 @@ namespace ProcesaArchivos.clases
             List<Materia> matL = todas
                 .Where(materia => materia.Valida())
                 //.OrderByDescending( materia => materia.numeroHoras )
+                .OrderByDescending(materia => materia.cupo)
                 .ToList();
             Queue<Materia> matQ = new Queue<Materia>(matL);
 
